@@ -1,0 +1,51 @@
+API Node.js com SQL
+
+- Este é um exemplo de uma API simples desenvolvida usando Node.js e SQL (Banco de Dados Relacional).
+
+Descrição:
+
+- Esta API foi criada para fornecer endpoints para interagir com um banco de dados SQL. Ela oferece operações CRUD (Create, Read, Update, Delete) para manipular recursos no banco de dados.
+
+Pré-requisitos:
+
+- Node.js instalado
+- Banco de dados SQL (por exemplo, MySQL, PostgreSQL) configurado e em execução
+- Variáveis de ambiente configuradas em um arquivo .env
+
+
+PREPARAÇÃO DO AMBIENTE
+
+Dependências Instaladas:
+
+ - body-parser: Um middleware de análise de corpo de solicitação para Express.js, usado para analisar o corpo de solicitações HTTP.
+
+ - cors: Um middleware para Express.js que habilita o controle de acesso a recursos de origens diferentes (CORS), permitindo que o servidor defina quais origens têm permissão para acessar seus recursos.
+
+ - dotenv: Um módulo que carrega variáveis de ambiente de um arquivo .env para process.env. Útil para armazenar configurações sensíveis e variáveis de ambiente.
+
+ - express: Um framework web para Node.js que simplifica o desenvolvimento de aplicativos web, oferecendo uma série de utilitários para lidar com solicitações HTTP, rotas, entre outros.
+
+ - mysql: Um driver MySQL para Node.js, usado para se conectar a um banco de dados MySQL e executar consultas SQL.
+
+ - mysql2: Uma versão melhorada e promissificada do driver MySQL para Node.js, oferecendo melhor desempenho e suporte a funcionalidades modernas do JavaScript.
+
+ - sequelize: Um ORM (Object-Relational Mapping) para Node.js, usado para mapear modelos de banco de dados relacionais para objetos JavaScript e fornecer métodos para interagir com o banco de dados de forma mais abstrata e orientada a objetos.
+
+DevDependencies:
+
+ - nodemon: Uma ferramenta de desenvolvimento que monitora alterações nos arquivos do projeto e reinicia automaticamente o servidor quando são detectadas mudanças. Útil durante o desenvolvimento para aumentar a produtividade.
+
+ - sequelize-cli: Uma ferramenta de linha de comando para Sequelize, utilizada para gerar modelos, migrações, sementes e executar outras tarefas relacionadas ao banco de dados.
+
+Variáveis De Ambiente:
+
+    # variaveis de ambiente
+        PORT = 3000
+        TZ=America/Sao_Paulo  # fuso horário
+
+        NODE_ENV=development  # ambiente do projeto
+        DB_HOST=localhost     # local do banco de dados
+        DB_DATABASE=db_clientes  # nome do banco de dados
+        DB_USER=root          # usuário do banco de dados
+        DB_PASS='#abc123#'             # senha do banco de dados
+        DB_DIALECT=mysql      # tipo do banco de dados

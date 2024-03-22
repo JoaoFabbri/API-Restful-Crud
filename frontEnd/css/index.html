@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <form id="addForm" class="add-form">
+            <input type="text" placeholder="Adicionar tarefas" class="input-task">
+            <button type="submit">+</button>
+            
+        </form>
+
+        <!-- Lista para exibir as tarefas adicionadas -->
+        <ul id="listaTarefas"></ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente ID</th>
+                    <th>Cliente</th>
+                    <th>Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tasksTableBody">
+                <!-- Aqui serão inseridas as tarefas dinamicamente -->
+            </tbody>
+        </table>
+
+
+    </main>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
