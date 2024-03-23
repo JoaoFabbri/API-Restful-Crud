@@ -63,18 +63,39 @@ async function excluirCliente(cliente_id) {
   }
 }
 
-const editarCliente = (cliente) => {
+const editarCliente = (cliente = null) => {
   const modal = document.getElementById("myModal");
-  const nomeModal = document.getElementById("nome");
-  const nascimentoModal = document.getElementById("nascimento");
-
-  // Exibir o modal
   modal.style.display = "block";
-  modal.value = cliente.nome;
-  modal.value = cliente.nascimento;
+
+  if (cliente !== null) {
+    const nomeModal = document.getElementById("nome");
+    const nascimentoModal = document.getElementById("nascimento");
+
+    // Exibir o modal
+    nomeModal.value = cliente.nome;
+    nascimentoModal.value = cliente.nascimento;
+    // clienteEditado = cliente;
+  }
 };
 
-// Obtenha o formulário pelo ID
+let clienteEditado = {};
+
+const adicionarTarefa = (cliente) => {
+  console.log(cliente);
+  if (clienteEditado && clienteEditado.cliente_id) {
+    //chamaro backend para salvar o banco
+    // atualizar usuário com od clienteEditado.cliente_id
+  } else {
+    //chamar o backend para salvar o banco
+    //cria usuário no banco
+  }
+  //atualiza a tabela com buscarClientes()
+  // limpa estado => clienteEditado = {}
+  // nomeModal.value
+  //nascimentoModal.value=''
+  //modal.style.display = 'none'
+};
+
 const form = document.getElementById("editForm");
 
 // Adicione um ouvinte de evento para o evento de envio do formulário
@@ -85,12 +106,15 @@ form.addEventListener("submit", function (event) {
   // Aqui você pode adicionar a lógica para lidar com o envio do formulário
   // Por exemplo, você pode obter os valores dos campos de entrada e fazer algo com eles
   const inputTask = document.querySelector(".input-task");
+
   const taskValue = inputTask.value;
 
-  const adicionarTarefa = (cliente) => {};
   // Exemplo: Adicionar a tarefa à lista de tarefas
   adicionarTarefa(taskValue);
 
   // Limpar o campo de entrada após o envio do formulário
+
   inputTask.value = "";
 });
+
+window.onload = buscarClientes;
